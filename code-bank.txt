@@ -1,0 +1,46 @@
+resource "aws_route_table" "taskPrivTable" {
+    vpc_id = aws_vpc.taskVPC.id
+    route {
+        cidr_block = "0.0.0.0/0"
+        gateway_id = aws_internet_gateway.taskGateway.id
+    }
+    tags = {
+        Name = "Task-Route-Internet-Subnet"
+    }
+}
+resource "aws_subnet" "taskVPCPrivSubnet" {
+    vpc_id = aws_vpc.taskVPC.id
+    cidr_block = "10.0.2.0/24"
+    map_public_ip_on_launch  ="false"
+    
+
+    tags = {
+        Name = "Task-Priv-Sub"
+    }
+}
+resource "aws_instance" "privEC2" {
+    ami           = var.ami-ROI
+    instance_type = var.type
+    key_name      = "Sam PC Key"
+    subnet_id = aws_subnet.taskVPCPrivSubnet.id
+    vpc_security_group_ids = [aws_security_group.PrivEC2Access.id]
+}
+resource "aws_security_group" "PrivEC2Access" {
+    vpc_id = aws_vpc.taskVPC.id
+
+    egress {
+        from_port = 0
+        to_port = 0
+        protocol = -1
+        cidr_blocks = [aws_instance.demo.public_ip]
+    }
+    ingress {
+        from_port = 22
+        to_port = 22
+        protocol = "tcp"
+        cidr_blocks = [aws_instance.demo.public_ip]
+    }
+    tags = {
+        Name = "SSH-Priv-SG"
+    }
+}

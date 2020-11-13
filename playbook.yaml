@@ -1,0 +1,12 @@
+- hosts: 34.247.136.109
+  become: true
+  tasks:
+  - name: Install NGINX
+    apt:
+      name: nginx
+      state: latest
+      update_cache: true
+  - name: Start NGINX Service
+    service:
+      name: nginx
+      state: started
