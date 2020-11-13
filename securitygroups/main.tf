@@ -1,5 +1,5 @@
 resource "aws_security_group" "taskSSH" {
-  vpc_id = aws_vpc.taskVPC.id
+  vpc_id = var.vpc_id
 
   egress {
     from_port   = 00
