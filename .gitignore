@@ -5,3 +5,4 @@ terraform.tfstate
 terraform.tfstate.backup
 .terraform/modules/modules.json
 .terraform.tfstate.lock.info
+secretVariables.tf
