@@ -1,4 +1,4 @@
-- hosts: 34.243.200.215
+- hosts: 34.254.92.218
   become: true
   tasks:
   - name: Copy docker-install.sh
@@ -8,3 +8,17 @@
       owner: ubuntu
   - name: Run docker-install.sh
     command: sh /home/ubuntu/docker-install.sh
+
+  - name: Copy jenkins-install.sh
+    copy:
+      src: jenkins-install.sh
+      dest: /home/ubuntu
+      owner: ubuntu
+
+  - name: Run jenkins-install.sh
+    command: sh /home/ubuntu/jenkins-install.sh
+
+  - name: Fetch initial jenkins password
+    fetch:
+      src: /home/ubuntu/jenkinsPass
+      dest: /home/ubuntu/terra1/ansible
