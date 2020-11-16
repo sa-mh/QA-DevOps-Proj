@@ -1,8 +1,8 @@
-.terraform/plugins/selections.json
-.terraform/plugins/registry.terraform.io/hashicorp/aws/3.14.1/linux_amd64/terraform-provider-aws_v3.14.1_x5
-crash.log
-terraform.tfstate
-terraform.tfstate.backup
-.terraform/modules/modules.json
-.terraform.tfstate.lock.info
-secretVariables.tf
+terraform/.terraform/plugins/selections.json
+terraform/.terraform/plugins/registry.terraform.io/hashicorp/aws/3.14.1/linux_amd64/terraform-provider-aws_v3.14.1_x5
+terraform/crash.log
+terraform/terraform.tfstate
+terraform/terraform.tfstate.backup
+terraform/.terraform/modules/modules.json
+terraform/.terraform.tfstate.lock.info
+terraform/secretVariables.tf
