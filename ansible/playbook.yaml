@@ -1,12 +1,10 @@
-- hosts: 34.247.53.78
+- hosts: 34.243.200.215
   become: true
   tasks:
-  - name: Install NGINX
-    apt:
-      name: nginx
-      state: latest
-      update_cache: true
-  - name: Start NGINX Service
-    service:
-      name: nginx
-      state: started
+  - name: Copy docker-install.sh
+    copy:
+      src: docker-install.sh
+      dest: /home/ubuntu
+      owner: ubuntu
+  - name: Run docker-install.sh
+    command: sh /home/ubuntu/docker-install.sh
