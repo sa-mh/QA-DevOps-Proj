@@ -1,12 +1,24 @@
-- hosts: 34.247.53.78
+- hosts: 34.254.92.218
   become: true
   tasks:
-  - name: Install NGINX
-    apt:
-      name: nginx
-      state: latest
-      update_cache: true
-  - name: Start NGINX Service
-    service:
-      name: nginx
-      state: started
+  - name: Copy docker-install.sh
+    copy:
+      src: docker-install.sh
+      dest: /home/ubuntu
+      owner: ubuntu
+  - name: Run docker-install.sh
+    command: sh /home/ubuntu/docker-install.sh
+
+  - name: Copy jenkins-install.sh
+    copy:
+      src: jenkins-install.sh
+      dest: /home/ubuntu
+      owner: ubuntu
+
+  - name: Run jenkins-install.sh
+    command: sh /home/ubuntu/jenkins-install.sh
+
+  - name: Fetch initial jenkins password
+    fetch:
+      src: /home/ubuntu/jenkinsPass
+      dest: /home/ubuntu/terra1/ansible
