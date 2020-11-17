@@ -40,4 +40,4 @@ until [[ -n "\$(cat  .jenkins/secrets/initialAdminPassword)" ]]; do
 done
 echo "initial admin password: \$(cat .jenkins/secrets/initialAdminPassword)"
 EOF
-sudo cat /home/jenkins/.jenkins/secrets/initialAdminPassword >> /home/ubuntu/jenkinsPass
+sudo cat /home/jenkins/.jenkins/secrets/initialAdminPassword >> /root/jenkinsPass

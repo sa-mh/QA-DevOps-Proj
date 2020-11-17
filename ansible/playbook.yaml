@@ -1,24 +1,37 @@
-- hosts: 34.254.92.218
+- hosts: 54.170.169.222
   become: true
   tasks:
-  - name: Copy docker-install.sh
+  - name: Copy pytest-install.sh
     copy:
-      src: docker-install.sh
-      dest: /home/ubuntu
-      owner: ubuntu
-  - name: Run docker-install.sh
-    command: sh /home/ubuntu/docker-install.sh
+      src: pytest-install.sh
+      dest: /root
+      owner: root
+  - name: Run pytest-install.sh
+    command: sh /root/pytest-install.sh
 
   - name: Copy jenkins-install.sh
     copy:
       src: jenkins-install.sh
-      dest: /home/ubuntu
-      owner: ubuntu
+      dest: /root
+      owner: root
+  - name: Copy docker-install.sh
+    copy:
+      src: docker-install.sh
+      dest: /root
+      owner: root
+  - name: Run docker-install.sh
+    command: sh /root/docker-install.sh
+
+  - name: Copy jenkins-install.sh
+    copy:
+      src: jenkins-install.sh
+      dest: /root
+      owner: root
 
   - name: Run jenkins-install.sh
-    command: sh /home/ubuntu/jenkins-install.sh
+    command: sh /root/jenkins-install.sh
 
   - name: Fetch initial jenkins password
     fetch:
-      src: /home/ubuntu/jenkinsPass
-      dest: /home/ubuntu/terra1/ansible
+      src: /root/jenkinsPass
+      dest: /home/ubuntu/terra1/ansible/returns/VM-IP
