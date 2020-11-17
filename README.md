@@ -1,4 +1,4 @@
 # terraform1
-
-ansible install nginx, inventory and playbook needs to be updated with the IP address each time a new VM is created
-code-bank has some things in there which might be useful for creating a private subnet and private ec2. none of it is tested though
+Ansible installs docker, docker compose, pytest and jenkins. The jenkins is returned to the VM in the terra1/ansible/returns directory.
+The ansible playbook and inventory need to be updated with the new IP each time terraform apply is used in order to work.
+Code bank has some extra code in there which was going to be used for creating a private subnet and EC2. It has not been used or tested as of yet.
