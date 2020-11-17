@@ -1,0 +1,10 @@
+- hosts: 34.240.58.52
+  become: true
+  tasks:
+  - name: Copy pytest-install.sh
+    copy:
+      src: pytest-install.sh
+      dest: /root
+      owner: root
+  - name: Run pytest-install.sh
+    command: sh /root/pytest-install.sh
