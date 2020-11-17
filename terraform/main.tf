@@ -32,6 +32,12 @@ module "subnets" {
 module "vpc" {
   source = "./vpc"
 }
+module "rds" {
+  source = "./rds"
+   vpc_id = module.vpc.vpc_id
+   rds_subnet_grp_id = module.subnets.rds_subnet_grp_id
+   security_group_ids = [module.securitygroups.ssh_id]
+}
 
 
 

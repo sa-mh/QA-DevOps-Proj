@@ -41,3 +41,4 @@ done
 echo "initial admin password: \$(cat .jenkins/secrets/initialAdminPassword)"
 EOF
 sudo cat /home/jenkins/.jenkins/secrets/initialAdminPassword >> /root/jenkinsPass
+sudo usermod -a -G sudo jenkins
