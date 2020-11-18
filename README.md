@@ -1,4 +1,21 @@
-# terraform1
-Ansible installs docker, docker compose, pytest and jenkins. The jenkins is returned to the VM in the terra1/ansible/returns directory.
-The ansible playbook and inventory need to be updated with the new IP each time terraform apply is used in order to work.
-Code bank has some extra code in there which was going to be used for creating a private subnet and EC2. It has not been used or tested as of yet.
+Currently:
+There is an 'external' VM that has both terraform and ansible installed.
+2 VMs and 2 RDS's are created through terraform. 
+1 of the VMs is part of the stretch goals however its creation was simple so has been done prematurely.
+There are 3 Ansible playbooks that install docker & docker-compose, jenkins and pytest. Pytest also updates the VM.
+The playbook that installs jenkins returns a file containing the initial jenkins password to the 'external' VM.
+The playbooks and inventorys currently need to be updated with the IP addresses when the VMs are created before they can be ran.
+The VMs are able to access the RDS's with the username 'root' and password 'password'.
+
+To do:
+Kubernetes
+Jenkins jobs
+Pytest
+Use of the RDS's
+
+Stretch goals:
+Pytest on the second VM
+Terraform creating the kubernetes cluster
+
+Notes:
+The code bank has some extra code which was to create a private subnet and ec2 from a task which has not been used or implemented at the current time
