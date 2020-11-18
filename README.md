@@ -8,14 +8,14 @@ The playbooks and inventorys currently need to be updated with the IP addresses 
 The VMs are able to access the RDS's with the username 'root' and password 'password'.
 
 To do:
-Kubernetes
-Jenkins jobs
-Pytest
-Use of the RDS's
+Kubernetes,
+Jenkins jobs,
+Pytest,
+Use of the RDS's.
 
 Stretch goals:
 Pytest on the second VM
 Terraform creating the kubernetes cluster
 
 Notes:
-The code bank has some extra code which was to create a private subnet and ec2 from a task which has not been used or implemented at the current time
+The code bank has some extra code which was to create a private subnet and ec2 from a task which has not been used or implemented at the current time.
