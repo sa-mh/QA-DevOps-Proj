@@ -13,7 +13,8 @@ Jenkins jobs,
 Pytest,
 Use of the RDS's,
 AWS CLI on the jenkins machine,
-Add user to docker group.
+Add user to docker group,
+Kubectl on the jenkins machine.
 
 Stretch goals:
 Pytest on the second VM
