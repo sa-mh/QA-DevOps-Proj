@@ -11,7 +11,8 @@ To do:
 Kubernetes,
 Jenkins jobs,
 Pytest,
-Use of the RDS's.
+Use of the RDS's,
+AWS CLI on the jenkins machine.
 
 Stretch goals:
 Pytest on the second VM
