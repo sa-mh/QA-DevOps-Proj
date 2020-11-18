@@ -15,6 +15,7 @@ Use of the RDS's,
 AWS CLI on the jenkins machine,
 Add user to docker group,
 Kubectl on the jenkins machine.
+Pytests tests in the directories 
 
 Stretch goals:
 Pytest on the second VM
