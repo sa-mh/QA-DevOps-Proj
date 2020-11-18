@@ -16,6 +16,7 @@ AWS CLI on the jenkins machine,
 Add user to docker group,
 Kubectl on the jenkins machine.
 Pytests tests in the directories 
+Put RDS password&username into hidden vars file
 
 Stretch goals:
 Pytest on the second VM
