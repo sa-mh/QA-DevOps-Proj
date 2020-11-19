@@ -1,4 +1,4 @@
-- hosts: 34.251.103.213
+- hosts: 34.253.240.208
   become: true
   tasks:
   - name: Copy pytest-install.sh
