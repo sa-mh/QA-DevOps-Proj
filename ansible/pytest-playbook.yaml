@@ -1,4 +1,4 @@
-- hosts: 34.253.240.208
+- hosts: 34.245.10.0
   become: true
   tasks:
   - name: Copy pytest-install.sh
@@ -32,6 +32,6 @@
 
   - name: Copy run-tests.sh
     copy:
-      src: docker-install.sh
+      src: Docker-Compose/run-tests.sh
       dest: /home/ubuntu
       owner: ubuntu
