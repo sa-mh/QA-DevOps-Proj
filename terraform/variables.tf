@@ -5,7 +5,7 @@ variable "ami" {
 
 variable "type" {
   description = "machine size"
-  default     = "t2.micro"
+  default     = "t2.small"
 }
 
 variable "ami-ROI" {

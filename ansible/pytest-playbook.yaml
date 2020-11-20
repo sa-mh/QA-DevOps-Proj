@@ -1,4 +1,4 @@
-- hosts: 34.253.240.208
+- hosts: 54.72.173.119
   become: true
   tasks:
   - name: Copy pytest-install.sh
@@ -6,5 +6,32 @@
       src: pytest-install.sh
       dest: /root
       owner: root
+
   - name: Run pytest-install.sh
     command: sh /root/pytest-install.sh
+
+  - name: Install mysql
+    apt:
+      name: mysql-server
+      state: latest
+
+  - name: Copy docker-install.sh
+    copy:
+      src: docker-install.sh
+      dest: /root
+      owner: root
+ 
+  - name: Run docker-install.sh
+    command: sh /root/docker-install.sh
+
+  - name: Copy docker-compose.yaml
+    copy:
+      src: Docker-Compose/docker-compose.yaml
+      dest: /home/ubuntu
+      owner: ubuntu
+
+  - name: Copy run-tests.sh
+    copy:
+      src: Docker-Compose/run-tests.sh
+      dest: /home/ubuntu
+      owner: ubuntu

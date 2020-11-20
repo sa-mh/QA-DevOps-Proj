@@ -5,3 +5,4 @@ terraform/terraform.tfstate.backup
 terraform/secretVariables.tf
 ansible/returns/VM-IP
 
+ansible/terraform.tfstate
