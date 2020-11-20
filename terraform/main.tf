@@ -38,6 +38,10 @@ module "rds" {
   rds_subnet_grp_id  = module.subnets.rds_subnet_grp_id
   security_group_ids = [module.securitygroups.ssh_id]
 }
-
+module "eks" {
+  source = "./eks"
+  rds_subnet_grp_id  = module.subnets.rds_subnet_grp_id
+  security_group_ids = [module.securitygroups.ssh_id]
+}
 
 
