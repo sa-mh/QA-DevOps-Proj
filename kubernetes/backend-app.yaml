@@ -1,0 +1,22 @@
+apiVersoin: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+  namespace: project
+  labels:
+    app: backend
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: backend
+    template:
+      metadata:
+        labels:
+          app: backend
+      spec:
+        containers:
+        - name: backend
+        image: horners/backend:latest
+        ports:
+        - containerPort: 5001
