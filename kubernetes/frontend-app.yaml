@@ -1,6 +1,6 @@
 apiVersion: apps/v1
 kind: Deployment
-metadata:
+metadata: 
   name: frontend
   namespace: project
   labels:
@@ -10,13 +10,13 @@ spec:
   selector:
     matchLabels:
       app: frontend
-    template:
-      metadata:
-        labels:
-          app: frontend
-      spec:
-        containers:
-        - name: frontend
+  template:
+    metadata:
+      labels:
+        app: frontend
+    spec:
+      containers:
+      - name: frontend
         image: horners/frontend:latest
         ports:
         - containerPort: 5000
