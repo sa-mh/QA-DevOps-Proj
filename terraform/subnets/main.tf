@@ -6,6 +6,7 @@ resource "aws_subnet" "taskVPCSubnet" {
 
   tags = {
     Name = "Task-Pub-Sub"
+    "kubernetes.io/cluster/project_cluster" = "shared"
   }
 }
 resource "aws_subnet" "rdsSubnet2" {
@@ -16,6 +17,7 @@ resource "aws_subnet" "rdsSubnet2" {
 
   tags = {
     Name = "RDS-Pub-Sub-2"
+    "kubernetes.io/cluster/project_cluster" = "shared"
   }
 }
 resource "aws_subnet" "rdsSubnet3" {
@@ -26,7 +28,9 @@ resource "aws_subnet" "rdsSubnet3" {
 
   tags = {
     Name = "RDS-Pub-Sub-3"
+    "kubernetes.io/cluster/project_cluster" = "shared"
   }
+  
 }
 resource "aws_db_subnet_group" "rds_groups" {
   name = "rds_groups"

@@ -20,6 +20,8 @@ module "routetable" {
   vpc_id     = module.vpc.vpc_id
   gateway_id = module.gateway.gateway_id
   subnet_id  = module.subnets.subnet_id
+  subnet2_id = module.subnets.subnet2_id
+  subnet3_id = module.subnets.subnet3_id
 }
 module "securitygroups" {
   source = "./securitygroups"
@@ -38,6 +40,12 @@ module "rds" {
   rds_subnet_grp_id  = module.subnets.rds_subnet_grp_id
   security_group_ids = [module.securitygroups.ssh_id]
 }
-
+module "eks" {
+  source             = "./eks"
+  subnet_id          = module.subnets.subnet_id
+  subnet2_id         = module.subnets.subnet2_id
+  subnet3_id         = module.subnets.subnet3_id
+  security_group_ids = [module.securitygroups.ssh_id]
+}
 
 

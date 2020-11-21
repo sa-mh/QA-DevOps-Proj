@@ -7,3 +7,9 @@ variable "gateway_id" {
 variable "vpc_id" {
   description = "vpc id to be overriden"
 }
+variable "subnet2_id" {
+  description = "subnet id to be overriden"
+}
+variable "subnet3_id" {
+  description = "subnet id to be overriden"
+}
