@@ -6,3 +6,5 @@ terraform/secretVariables.tf
 ansible/returns/VM-IP
 
 ansible/terraform.tfstate
+secrets/jenkins-vm
+secrets/testing-vm

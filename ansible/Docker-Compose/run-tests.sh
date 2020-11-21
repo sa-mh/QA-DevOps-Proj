@@ -3,8 +3,8 @@
 docker pull horners/frontend:latest
 docker pull horners/backend:latest
 
-mysql -h terraform-20201121123706348700000002.cml50gxwj1hn.eu-west-1.rds.amazonaws.com -P 3306 -u root -ppassword < database/Create.sql
-mysql -h terraform-20201121123706355700000003.cml50gxwj1hn.eu-west-1.rds.amazonaws.com -P 3306 -u root -ppassword < database/Create.sql
+mysql -h ${DB_END} -P 3306 -u ${DB_USER} -p${DB_PASS} < database/Create.sql
+mysql -h ${TDB_END} -P 3306 -u ${DB_USER} -p${DB_PASS} < database/Create.sql
 
 docker-compose up -d
 docker exec backend bash -c "pytest tests/ --cov application"
