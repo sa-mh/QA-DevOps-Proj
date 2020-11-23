@@ -1,8 +1,10 @@
-terraform/.terraform/plugins/selections.json
-terraform/.terraform/plugins/registry.terraform.io/hashicorp/aws/3.14.1/linux_amd64/terraform-provider-aws_v3.14.1_x5
+terraform/.terraform
 terraform/crash.log
 terraform/terraform.tfstate
 terraform/terraform.tfstate.backup
-terraform/.terraform/modules/modules.json
-terraform/.terraform.tfstate.lock.info
 terraform/secretVariables.tf
+ansible/returns/VM-IP
+
+ansible/terraform.tfstate
+secrets/jenkins-vm
+secrets/testing-vm
