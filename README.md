@@ -2,10 +2,10 @@
 
 ## Resources
 
-App files github:  https://github.com/sa-mh/Project-Flask-App
-Presentation: https://docs.google.com/presentation/d/1yy_3wZzLw1IBtWvrflwx8pH2nJZTPZIL38gp6cAwIxo/edit?usp=sharing
-Jira Board: https://sam-horner.atlassian.net/secure/RapidBoard.jspa?projectKey=DOP&rapidView=1&view=planning.nodetail&atlOrigin=eyJpIjoiMTg4NDQyMjkwZGM2NDU0OTk3OTg0MjllM2E2ZDI5YWUiLCJwIjoiaiJ9
-Project Instructions: https://docs.google.com/document/d/1SBZ2SsGR2uu-U1esZYfJwPKKjiQDkTpNtS5vh3BX0I8/edit?usp=sharing
+* App files github:  https://github.com/sa-mh/Project-Flask-App
+* Presentation: https://docs.google.com/presentation/d/1yy_3wZzLw1IBtWvrflwx8pH2nJZTPZIL38gp6cAwIxo/edit?usp=sharing
+* Jira Board: https://sam-horner.atlassian.net/secure/RapidBoard.jspa?projectKey=DOP&rapidView=1&view=planning.nodetail&atlOrigin=eyJpIjoiMTg4NDQyMjkwZGM2NDU0OTk3OTg0MjllM2E2ZDI5YWUiLCJwIjoiaiJ9
+* Project Instructions: https://docs.google.com/document/d/1SBZ2SsGR2uu-U1esZYfJwPKKjiQDkTpNtS5vh3BX0I8/edit?usp=sharing
 
 ## Contents
 
