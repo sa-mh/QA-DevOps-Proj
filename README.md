@@ -11,7 +11,7 @@ Project Instructions: https://docs.google.com/document/d/1SBZ2SsGR2uu-U1esZYfJwP
 
 * [Brief](#brief)
 * [Project Tracking](#project-tracking)
-* [Deployment])(#deployment)
+* [Deployment](#deployment)
  * [Terraform](#terraform)
  * [Ansible](#ansible)
  * [Jenkins](#jenkins)
