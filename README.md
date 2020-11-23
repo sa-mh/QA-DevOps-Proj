@@ -84,7 +84,7 @@ The application is hosted in an EKS with a node group of three containers. In th
 
 ## Application Instructions
 
-Step by step instructions to start the terraforming process through to accessing the webpage can be found on a google doc here.
+Step by step instructions to start the terraforming process through to accessing the webpage can be found on a google doc in the resources section at the beginning of the readme.
 
 ## Known Issues
 
