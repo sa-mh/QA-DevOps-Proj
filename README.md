@@ -24,3 +24,5 @@ Terraform creating the kubernetes cluster
 
 Notes:
 The code bank has some extra code which was to create a private subnet and ec2 from a task which has not been used or implemented at the current time.
+
+https://sam-horner.atlassian.net/secure/RapidBoard.jspa?projectKey=DOP&rapidView=1&view=planning.nodetail&atlOrigin=eyJpIjoiMTg4NDQyMjkwZGM2NDU0OTk3OTg0MjllM2E2ZDI5YWUiLCJwIjoiaiJ9
