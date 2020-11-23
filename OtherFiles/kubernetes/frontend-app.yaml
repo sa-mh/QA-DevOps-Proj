@@ -17,6 +17,7 @@ spec:
     spec:
       containers:
       - name: frontend
+        imagePullPolicy: Always
         image: horners/frontend:latest
         ports:
         - containerPort: 5000

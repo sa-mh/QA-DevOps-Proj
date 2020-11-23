@@ -17,6 +17,7 @@ spec:
     spec:
       containers:
       - name: backend
+        imagePullPolicy: Always
         image: horners/backend:latest
         env:
         - name: DATABASE_URI
